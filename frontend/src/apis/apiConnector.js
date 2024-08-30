@@ -2,6 +2,7 @@ const BASEURL = import.meta.env.VITE_BASE_URL;
 import toast from "react-hot-toast";
 export const GetAllUser = async () => {
   let toastId = toast.loading("Loading");
+  console.log(`API API API-> ${BASEURL}all`)
   try {
     const response = await fetch(`${BASEURL}all`, {
       method: "GET",
