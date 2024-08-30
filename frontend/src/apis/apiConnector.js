@@ -6,7 +6,7 @@ export const GetAllUser = async () => {
   let toastId = toast.loading("Loading");
   console.log(`API API API-> ${GETALLAPI}`)
   try {
-    const response = await fetch(GETALLAPI, {
+    const response = await fetch("https://pdfupload-2fq7.onrender.com/all", {
       method: "GET",
     });
     toast.success("Fetched User Successfully")
@@ -23,7 +23,7 @@ export const GetAllUser = async () => {
 export const uploadUser = async (userData) => {
   let toastId = toast.loading("Loading");
   try {
-    const response = await fetch(CREATEAPI,{
+    const response = await fetch("https://pdfupload-2fq7.onrender.com/create",{
         method:"POST",
         body:userData
     })
