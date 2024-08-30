@@ -1,10 +1,12 @@
 const BASEURL = import.meta.env.VITE_BASE_URL;
 import toast from "react-hot-toast";
+const GETALLAPI=BASEURL+"/all";
+const CREATEAPI=BASEURL+"/create";
 export const GetAllUser = async () => {
   let toastId = toast.loading("Loading");
-  console.log(`API API API-> ${BASEURL}all`)
+  console.log(`API API API-> ${GETALLAPI}`)
   try {
-    const response = await fetch(`${BASEURL}all`, {
+    const response = await fetch(GETALLAPI, {
       method: "GET",
     });
     toast.success("Fetched User Successfully")
@@ -21,7 +23,7 @@ export const GetAllUser = async () => {
 export const uploadUser = async (userData) => {
   let toastId = toast.loading("Loading");
   try {
-    const response = await fetch(`${BASEURL}create`,{
+    const response = await fetch(CREATEAPI,{
         method:"POST",
         body:userData
     })
