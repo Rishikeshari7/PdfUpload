@@ -9,7 +9,7 @@ const fileUpload=require("express-fileupload")
 
 app.use(express.json())
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://pdf-upload-mu.vercel.app",
     credentials:true,
 }))
 app.use(fileUpload({
